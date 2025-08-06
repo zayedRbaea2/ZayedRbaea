@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Zayed Haj Rbaea</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="pic/editor.ico">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            margin: 0;
+            display: flex;
+            overflow-x: hidden; 
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100vh;
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 4px 0 6px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-bottom: 15px;
+        }
+        .sidebar h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .sidebar p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-left: 320px; 
+            padding: 20px;
+            width: calc(100% - 320px); /
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .skills-list, .experience-list, .education-list, .training-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills-list li, .experience-list li, .education-list li, .training-list li {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .skills-list li:hover, .experience-list li:hover, .education-list li:hover, .training-list li:hover {
+            background: #007bff;
+            color: #fff;
+            transition: background 0.3s;
+        }
+        .name{
+                margin-left: 3px;
+            }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                box-shadow: none;
+            }
+            .sidebar {
+                margin-bottom: 20px;
+            }
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+            .sidebar img {
+                width: 150px;
+                height: auto;
+            }
+            .sidebar h1 {
+                font-size: 1.25rem;
+            }
+            .sidebar p {
+                font-size: 0.875rem;
+            }
+         
+        }
+        @media screen and (max-width: 576px) {
+            .sidebar h1 {
+                font-size: 1rem;
+            }
+            .sidebar p {
+                font-size: 0.75rem;
+            }
+            .sidebar img {
+                width: 120px;
+            }
+            .content {
+                padding: 10px;
+            }
+           
+        }
+        details{
+           
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elements = document.querySelectorAll('.fade-in');
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+            elements.forEach(function(element) {
+                observer.observe(element);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="sidebar">
+    <center>    <h1 class="name">Zayed Rbaea</h1></center>
+    <img src="pic/profile-pic.jpg" alt="Profile Picture">
+    <p>Software Engineer |Graphic Designer |  Programmer |  Developer</p>
+    <p><a href="mailto:zrbaea@gmail.com">Email:zrbaea@gmail.com</a></p>
+    <p><a href="https://wa.me/qr/ZYWNSCBDCC3OL1">Phone: +963980910351</a></p>
+    <p> <a href="https://github.com/zayedRbaea2">GitHub:zayedRbaea2</a></p>
+</div>
+
+<div class="content">
+    <div class="section fade-in">
+        <h2>Objective</h2>
+        <p>An accomplished professional with experience in software engineering and graphic design and programming, seeking to apply my skills and contribute to impactful projects in the tech and creative industries.</p>
+    </div>
+
+    <div class="section fade-in">
+        <h2>Education</h2>
+        <ul class="education-list">
+            <li><strong>Computer Technical Institute-Idleb University</strong> - Graduated: 2024</li>
+        </ul>
+    </div>
+
+    <div class="section fade-in">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>Frameworks: Bootstrap, Laravel, .NET, Flutter</li>
+            <li>Database: MySQL, SQL, SQLite, Firebase, Normalization</li>
+            <li>Operating Systems: Linux, Windows, Android, IOS</li>
+            <li>Programming Languages: C, C#, Java, Python, Dart, JavaScript, PHP</li>
+            <li>Markup Languages: HTML, XML</li>
+           
+          
+            <li>Other Skills: Fast typing, effective communication, continuous learning</li>
+            <li>Languages: Arabic, Reading and Writing English</li>
+             </li>
+            <!-- <li> -->
+                <details>
+                    <summary>Softwares</summary>
+                   
+                       <li>IDE: Phpstorm, Visual Studio, Android Studio, Apache NetBeans</li>
+                       <li>Code Editors: Visual Studio Code, Notepad++, Brackets</li>
+                       <li>Graphic Design: Adobe Photoshop, Illustrator, After Effects, Premiere, Figma</li>
+                       <li>Other Softwares: CISCO Packet Tracer, Edraw Max......  </li>
+               
+                      </details>
+                   <!-- </li> -->
+        </ul>
+    </div>
+
+    <div class="section fade-in">
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li>
+                <ul>
+                    <li>Data management and supporting the team with IT needs.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section fade-in">
+        <h2>Courses and Training</h2>
+        <ul class="training-list">
+            <li>Excel Expert and Data Analysis (24 hours)</li>
+            <li>Flutter Development - Online Course</li>
+            <li>Software Engineering - Idleb University</li>
+            <li>Graphic Design and Animation Courses - Online Training</li>
+            <li>Bash Scripting - Online Training</li>
+        </ul>
+    </div>
+
+    <p class="text-center fade-in"><em>References available upon request</em></p>
+</div>
+
+</body>
+</html>
