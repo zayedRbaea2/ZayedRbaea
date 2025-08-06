@@ -13,7 +13,7 @@
             background-color: #f7f7f7;
             margin: 0;
             display: flex;
-            overflow-x: hidden; 
+            overflow-x: hidden;
         }
         .sidebar {
             position: fixed;
@@ -21,12 +21,14 @@
             left: 0;
             width: 300px;
             height: 100vh;
-            background: #007bff;
+            background: linear-gradient(to bottom, #0062cc, #0056b3);
             color: #fff;
             padding: 20px;
             box-shadow: 4px 0 6px rgba(0,0,0,0.1);
             overflow-y: auto;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transition: all 0.3s ease-in-out;
+            z-index: 1000;
         }
         .sidebar img {
             width: 100%;
@@ -34,6 +36,7 @@
             border-radius: 50%;
             border: 3px solid #fff;
             margin-bottom: 15px;
+            transition: all 0.3s ease-in-out;
         }
         .sidebar h1 {
             font-size: 1.5rem;
@@ -53,9 +56,9 @@
             text-decoration: underline;
         }
         .content {
-            margin-left: 320px; 
+            margin-left: 320px;
             padding: 20px;
-            width: calc(100% - 320px); /
+            width: calc(100% - 320px);
         }
         .section {
             margin-bottom: 30px;
@@ -68,17 +71,17 @@
             background: #ffffff;
             margin: 10px 0;
             padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
         }
         .skills-list li:hover, .experience-list li:hover, .education-list li:hover, .training-list li:hover {
             background: #007bff;
             color: #fff;
             transition: background 0.3s;
         }
-        .name{
-                margin-left: 3px;
-            }
+        .name {
+            margin-left: 3px;
+        }
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -88,49 +91,67 @@
             opacity: 1;
             transform: translateY(0);
         }
+
         @media screen and (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                box-shadow: none;
+            body {
+                flex-direction: column;
             }
             .sidebar {
-                margin-bottom: 20px;
+                position: relative;
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                text-align: left;
+                padding: 20px;
+                background: linear-gradient(to right, #007bff, #0056b3);
+            }
+            .sidebar img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-right: 15px;
+                margin-bottom: 0;
+            }
+            .sidebar h1 {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+            .sidebar p {
+                font-size: 0.9rem;
+                margin: 2px 0;
+                flex-basis: 100%;
             }
             .content {
                 margin-left: 0;
                 width: 100%;
+                padding: 15px;
             }
-            .sidebar img {
-                width: 150px;
-                height: auto;
-            }
-            .sidebar h1 {
-                font-size: 1.25rem;
-            }
-            .sidebar p {
-                font-size: 0.875rem;
-            }
-         
         }
+
         @media screen and (max-width: 576px) {
             .sidebar h1 {
+                                text-align: center;
+
                 font-size: 1rem;
             }
             .sidebar p {
-                font-size: 0.75rem;
+              
+                font-size: 0.8rem;
+                text-align: center;
             }
             .sidebar img {
-                width: 120px;
+margin-left: 15%;
+                align-items: center;
+                width: 200px;
+                height: 200px;
             }
-            .content {
-                padding: 10px;
-            }
-           
         }
-        details{
-           
+
+        details {
+            margin-top: 10px;
         }
     </style>
     <script>
@@ -152,12 +173,14 @@
 <body>
 
 <div class="sidebar">
-    <center>    <h1 class="name">Zayed Rbaea</h1></center>
     <img src="pic/profile-pic.jpg" alt="Profile Picture">
-    <p>Software Engineer |Graphic Designer |  Programmer |  Developer</p>
-    <p><a href="mailto:zrbaea@gmail.com">Email:zrbaea@gmail.com</a></p>
-    <p><a href="https://wa.me/qr/ZYWNSCBDCC3OL1">Phone: +963980910351</a></p>
-    <p> <a href="https://github.com/zayedRbaea2">GitHub:zayedRbaea2</a></p>
+    <div>
+        <h1 class="name">Zayed Rbaea</h1>
+        <p>Software Engineer | Graphic Designer | Programmer | Developer</p>
+        <p><a href="mailto:zrbaea@gmail.com">Email: zrbaea@gmail.com</a></p>
+        <p><a href="https://wa.me/qr/ZYWNSCBDCC3OL1">Phone: +963980910351</a></p>
+        <p><a href="https://github.com/zayedRbaea2">GitHub: zayedRbaea2</a></p>
+    </div>
 </div>
 
 <div class="content">
@@ -181,22 +204,15 @@
             <li>Operating Systems: Linux, Windows, Android, IOS</li>
             <li>Programming Languages: C, C#, Java, Python, Dart, JavaScript, PHP</li>
             <li>Markup Languages: HTML, XML</li>
-           
-          
             <li>Other Skills: Fast typing, effective communication, continuous learning</li>
             <li>Languages: Arabic, Reading and Writing English</li>
-             </li>
-            <!-- <li> -->
-                <details>
-                    <summary>Softwares</summary>
-                   
-                       <li>IDE: Phpstorm, Visual Studio, Android Studio, Apache NetBeans</li>
-                       <li>Code Editors: Visual Studio Code, Notepad++, Brackets</li>
-                       <li>Graphic Design: Adobe Photoshop, Illustrator, After Effects, Premiere, Figma</li>
-                       <li>Other Softwares: CISCO Packet Tracer, Edraw Max......  </li>
-               
-                      </details>
-                   <!-- </li> -->
+            <details>
+                <summary>Softwares</summary>
+                <li>IDE: Phpstorm, Visual Studio, Android Studio, Apache NetBeans</li>
+                <li>Code Editors: Visual Studio Code, Notepad++, Brackets</li>
+                <li>Graphic Design: Adobe Photoshop, Illustrator, After Effects, Premiere, Figma</li>
+                <li>Other Softwares: CISCO Packet Tracer, Edraw Max...</li>
+            </details>
         </ul>
     </div>
 
